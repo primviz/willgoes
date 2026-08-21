@@ -1,0 +1,20 @@
+# Site - Will Goes - V3.1
+
+Projeto estático em HTML, CSS e JavaScript puro, pronto para GitHub e Cloudflare Pages.
+
+## Alterações V3.1
+- Removidos divisores visuais em formato de travessão nas chamadas de seção.
+- Removido bloco informativo não clicável de WhatsApp e Instagram ao lado do formulário.
+- Formulário conectado ao WhatsApp do Will: +55 74 99105-2293.
+- Campos da mensagem do WhatsApp formatados em negrito.
+- Ícone oficial do WhatsApp aplicado ao envio e botão flutuante.
+- Background refinado para textura contínua e transições sem quebra entre seções.
+- GA4 instalado: G-6PY6LP566G.
+- Evento `lead_whatsapp` preservado no envio validado do formulário.
+- Evento único `click_checkout` aplicado a todos os infoprodutos, com parâmetro `product_name`.
+
+## Observação GA4
+O código e os eventos estão implementados. A confirmação no relatório Realtime precisa ser feita após o site estar publicado em um domínio acessível e os cliques serem simulados no navegador.
+
+
+V3.1: capas dos cursos ajustadas para ocupar a largura sem moldura interna e seta laranja luminosa adicionada como indicador de rolagem lateral em telas menores.
