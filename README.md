@@ -18,3 +18,9 @@ O código e os eventos estão implementados. A confirmação no relatório Realt
 
 
 V3.1: capas dos cursos ajustadas para ocupar a largura sem moldura interna e seta laranja luminosa adicionada como indicador de rolagem lateral em telas menores.
+
+
+## V3.2
+- Capas dos infoprodutos ajustadas para preenchimento total, sem as faixas brancas laterais dos arquivos originais.
+- Indicador de rolagem dos cursos alterado para seta laranja brilhosa sem círculo.
+- Logomarca do header agora retorna explicitamente ao topo do site ao clicar.

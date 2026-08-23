@@ -19,6 +19,12 @@
   }));
 
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const brandHome = $('#brand-home');
+  brandHome?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, left: 0, behavior: reduced ? 'auto' : 'smooth' });
+    history.replaceState(null, '', location.pathname + location.search);
+  });
   $$('.reveal').forEach(el => {
     const delay = el.dataset.delay || 0;
     el.style.setProperty('--delay', `${delay}ms`);
