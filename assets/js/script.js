@@ -57,22 +57,33 @@
 
 
   const courseGrid = $('#course-grid');
-  const courseHint = $('.course-scroll-hint');
-  courseHint?.addEventListener('click', () => {
+  const coursePrev = $('.course-scroll-prev');
+  const courseNext = $('.course-scroll-next');
+  const scrollCourse = dir => {
     if (!courseGrid) return;
     const card = $('.course-card', courseGrid);
     const step = (card?.getBoundingClientRect().width || 320) + 14;
-    courseGrid.scrollBy({ left: step, behavior: reduced ? 'auto' : 'smooth' });
-  });
-  const updateCourseHint = () => {
-    if (!courseGrid || !courseHint) return;
-    const canScroll = courseGrid.scrollWidth > courseGrid.clientWidth + 4;
-    const atEnd = courseGrid.scrollLeft + courseGrid.clientWidth >= courseGrid.scrollWidth - 8;
-    courseHint.style.opacity = canScroll && !atEnd ? '1' : '.28';
+    courseGrid.scrollBy({ left: step * dir, behavior: reduced ? 'auto' : 'smooth' });
   };
-  courseGrid?.addEventListener('scroll', updateCourseHint, { passive: true });
-  window.addEventListener('resize', updateCourseHint, { passive: true });
-  updateCourseHint();
+  coursePrev?.addEventListener('click', () => scrollCourse(-1));
+  courseNext?.addEventListener('click', () => scrollCourse(1));
+  const updateCourseHints = () => {
+    if (!courseGrid) return;
+    const canScroll = courseGrid.scrollWidth > courseGrid.clientWidth + 4;
+    const atStart = courseGrid.scrollLeft <= 8;
+    const atEnd = courseGrid.scrollLeft + courseGrid.clientWidth >= courseGrid.scrollWidth - 8;
+    if (coursePrev) {
+      coursePrev.style.opacity = canScroll && !atStart ? '1' : '.22';
+      coursePrev.disabled = !canScroll || atStart;
+    }
+    if (courseNext) {
+      courseNext.style.opacity = canScroll && !atEnd ? '1' : '.22';
+      courseNext.disabled = !canScroll || atEnd;
+    }
+  };
+  courseGrid?.addEventListener('scroll', updateCourseHints, { passive: true });
+  window.addEventListener('resize', updateCourseHints, { passive: true });
+  updateCourseHints();
 
   function trackEvent(name, params = {}) {
     if (typeof window.gtag === 'function') window.gtag('event', name, params);
