@@ -30,3 +30,7 @@ V3.1: capas dos cursos ajustadas para ocupar a largura sem moldura interna e set
 - Setas laterais bidirecionais na seção de cursos.
 - Ajuste do título do hero em desktop para não sobrepor a foto.
 - GA4 G-6PY6LP566G e evento click_checkout preservados para todos os infoprodutos.
+
+
+## V3.4
+- Removido o primeiro parágrafo da apresentação principal conforme solicitado.
