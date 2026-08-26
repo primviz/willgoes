@@ -113,7 +113,7 @@
       `*WhatsApp:* ${data.get('telefone')}`,
       `*Modalidade:* ${data.get('modalidade')}`,
       `*Objetivo:* ${data.get('objetivo')}`,
-      `*Já fez treinamento de força:* ${data.get('treino_forca')}`,
+      `*Já fez ou faz musculação atualmente:* ${data.get('treino_forca')}`,
       `*Consultoria anterior:* ${data.get('consultoria_anterior')}`,
       `*Motivo de ter parado:* ${data.get('motivo_parou') || 'Não informado'}`,
       `*Lesão ou limitação:* ${data.get('limitacoes')}`
