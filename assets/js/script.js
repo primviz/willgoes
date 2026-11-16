@@ -118,7 +118,7 @@
       `*Motivo de ter parado:* ${data.get('motivo_parou') || 'Não informado'}`,
       `*Lesão ou limitação:* ${data.get('limitacoes')}`
     ];
-    const url = `https://wa.me/5574991052293?text=${encodeURIComponent(lines.join('\n'))}`;
+    const url = `https://wa.me/5575991256548?text=${encodeURIComponent(lines.join('\n'))}`;
     trackEvent('lead_whatsapp', { event_category: 'contato', event_label: 'Formulário WhatsApp' });
     window.open(url, '_blank', 'noopener,noreferrer');
   });

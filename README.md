@@ -5,7 +5,7 @@ Projeto estático em HTML, CSS e JavaScript puro, pronto para GitHub e Cloudflar
 ## Alterações V3.1
 - Removidos divisores visuais em formato de travessão nas chamadas de seção.
 - Removido bloco informativo não clicável de WhatsApp e Instagram ao lado do formulário.
-- Formulário conectado ao WhatsApp do Will: +55 74 99105-2293.
+- Formulário conectado ao WhatsApp do Will: +55 75 99125-6548.
 - Campos da mensagem do WhatsApp formatados em negrito.
 - Ícone oficial do WhatsApp aplicado ao envio e botão flutuante.
 - Background refinado para textura contínua e transições sem quebra entre seções.
